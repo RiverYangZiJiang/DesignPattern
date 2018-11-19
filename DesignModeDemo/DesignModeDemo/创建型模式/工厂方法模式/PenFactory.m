@@ -21,7 +21,7 @@
             pen = [[Pencil alloc] init];
             break;
         case PenTypeBallpointPen:
-            pen = [[BallpointPen alloc]init];
+            pen = [[BallpointPen alloc] init];
         default:
             break;
     }

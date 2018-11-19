@@ -9,14 +9,27 @@
 #import <Foundation/Foundation.h>
 #import "Pen.h"
 
-typedef enum : NSUInteger {
+/**
+ 笔的类型
+
+ - PenTypePencil: 铅笔
+ - PenTypeBallpointPen: 圆珠笔
+ - PenTypeNone: <#PenTypeNone description#>
+ */
+typedef NS_ENUM(NSUInteger, PenType) {
     PenTypePencil,
     PenTypeBallpointPen,
     PenTypeNone,
-} PenType;
+};
 
 @interface PenFactory : NSObject
 
+/**
+ 创建笔的工厂方法
+
+ @param penType 笔类型
+ @return 笔对象
+ */
 + (Pen *)penFactory:(PenType)penType;
 
 @end
